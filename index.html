@@ -7,8 +7,85 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Weather App</title>
 </head>
+
+<header>
+  <h1>WEATHER DASHBOARD</h1>
+</header>
+
 <body>
-  
+
+  <div id="search-container">
+    <label>Search by city name...</label>
+    <input placeholder="Ex → Atlanta" id="input">
+    <button id="submit" >SEARCH</button>
+  </div>
+
+  <!-- Below will be where search history results are displayed -->
+  <div id="search-history"></div>
+
+  <div id="search-results">
+  <!-- Below is current city name and date -->
+    <h2 id="city"><span id="date"></span></h2>
+      <p>Temperature: <span class="currentInfo"></span></p>
+      <p>Wind Speed: <span class="currentInfo"></span></p>
+      <p>Humidity: <span class="currentInfo"></span></p>
+      <p>Heat Index: <span class="currentInfo"></span></p>
+  </div>
+
+  <div id="forecast">
+    <h2>5-Day Forecast</h2>
+
+    <div>
+      <h3>Tomorrow</h3>
+      <!-- Below is forecast day 1 icon -->
+      <div class="icon"></div>
+      <p>Temperature: <span class="forecastInfo"></span></p>
+      <p>Wind Speed: <span class="forecastInfo"></span></p>
+      <p>Humidity: <span class="forecastInfo"></span></p>
+    </div>
+
+    <div>
+      <!-- Below is forecast day 2 card title which will be a date -->
+      <h3></h3>
+      <!-- Below is forecast day 2 icon -->
+      <div class="icon"></div>
+      <p>Temperature: <span class="forecastInfo"></span></p>
+      <p>Wind Speed: <span class="forecastInfo"></span></p>
+      <p>Humidity: <span class="forecastInfo"></span></p>
+    </div>
+
+    <div>
+      <!-- Below is forecast day 3 card title which will be a date -->
+      <h3></h3>
+      <!-- Below is forecast day 3 icon -->
+      <div class="icon"></div>
+      <p>Temperature: <span class="forecastInfo"></span></p>
+      <p>Wind Speed: <span class="forecastInfo"></span></p>
+      <p>Humidity: <span class="forecastInfo"></span></p>
+    </div>
+
+    <div>
+      <!-- Below is forecast day 4 card title which will be a date -->
+      <h3></h3>
+      <!-- Below is forecast day 4 icon -->
+      <div class="icon"></div>
+      <p>Temperature: <span class="forecastInfo"></span></p>
+      <p>Wind Speed: <span class="forecastInfo"></span></p>
+      <p>Humidity: <span class="forecastInfo"></span></p>
+    </div>
+
+    <div>
+      <!-- Below is forecast day 5 card title which will be a date -->
+      <h3></h3>
+      <!-- Below is forecast day 5 icon -->
+      <div class="icon"></div>
+      <p>Temperature: <span class="forecastInfo"></span></p>
+      <p>Wind Speed: <span class="forecastInfo"></span></p>
+      <p>Humidity: <span class="forecastInfo"></span></p>
+    </div>
+    
+  </div>
+
   <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
