@@ -1,0 +1,44 @@
+.lineup {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.city-icon {
+  margin-left: 25px;
+}
+
+.uvi-green {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.uvi-yellow {
+  background-color: yellow;
+  color: red;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.uvi-orange {
+  background-color: orange;
+  color: red;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.uvi-red {
+  background-color: red;
+  color: yellow;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.history {
+  background-color: gray;
+  color: white;
+  list-style-type: none;
+}
