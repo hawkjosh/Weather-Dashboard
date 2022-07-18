@@ -9,7 +9,7 @@
   <title>Weather App</title>
 </head>
 
-<header class="header bg-primary">
+<header class="header bg-primary bg-gradient">
   <h1 class="text-center text-light">WEATHER DASHBOARD</h1>
 </header>
 
@@ -18,98 +18,99 @@
   <div class="row">
     <div class="col-3 vh-100">
       <div id="search-area">
-        <label style="font-size: 2rem; font-weight: bold">Search for a City:</label>
+        <label style="font-size: 1.75rem; font-weight: bold" class="ms-2">Search for a City:</label>
         <br>
-        <input id="search-bar" class="col-12" placeholder="San Diego">
+        <input id="search-bar" class="col-12 m-2" placeholder="San Diego">
         <br>
-        <button id="search-btn" class="btn btn-primary col-12">Search</button>
+        <button id="search-btn" class="btn btn-primary col-12 m-2">Search</button>
       </div>
 
       <hr>
 
       <!-- Below will be where search history results are displayed -->
-      <div id="search-history"></div>
+      <ul id="search-history" class="m-2"></ul>
     </div>
 
     <div class="col-9 vh-100">
-      <div id="search-results" class="col-12 border border-dark">
-      <!-- Below is an empty <h2> element for the current city name and date -->
-        <div class="container">
+      <div id="search-results" class="col-12 border border-dark p-2">
+        <div class="lineup">
+          <!-- Below is an empty <h2> element for the current city name and date -->
           <h2 id="city"></h2>
-          <p id="curr-icon" class="float-start"></p>
+          <!-- Below is an empty <img> element for the current weather icon -->
+          <img src="" id="city-icon" class="city-icon">
         </div>
-            <p>Temp: <span class="curr-info"></span></p>
-            <p>Wind: <span class="curr-info"></span></p>
-            <p>Humidity: <span class="curr-info"></span></p>
-            <p>UV Index: <span class="curr-info"></span></p>
+          <p>Temp: <span class="curr-info"></span></p>
+          <p>Wind: <span class="curr-info"></span></p>
+          <p>Humidity: <span class="curr-info"></span></p>
+          <p>UV Index: <span class="curr-info"></span></p>
       </div>
 
       <h2>5-Day Forecast:</h2>
 
       <div class="container overflow-hidden">
-        <div class="row gx-4">
+        <div id="forecast-info" class="row gx-4">
           <div class="col">
-            <div class="card" style="color: white; background-color: #33475a">
+            <div class="card p-2" style="color: white; background-color: #33475a">
               <!-- The <h3> tag below will contain the day 1 forecast date -->
               <h3 class="forecast-date"></h3>
-              <!-- The <div> tag below will contain the day 1 forecast icon -->
-              <div class="icon" style="font-size: 2rem"></div>
+              <!-- The <img> tag below will contain the day 1 forecast icon -->
+              <img src="" id="forecast-icon1">
               <!-- The empty <span> tags below will contain the corresponding day 1 forecast info -->
-              <p>Temp: <span class="forecast-info"></span></p>
-              <p>Wind: <span class="forecast-info"></span></p>
-              <p>Humidity: <span class="forecast-info"></span></p>
+              <p>Temp: <span></span></p>
+              <p>Wind: <span></span></p>
+              <p>Humidity: <span></span></p>
             </div>
           </div>
 
           <div class="col">
-            <div class="card" style="color: white; background-color: #33475a">
+            <div class="card p-2" style="color: white; background-color: #33475a">
               <!-- The <h3> tag below will contain the day 2 forecast date -->
               <h3 class="forecast-date"></h3>
-              <!-- The <div> tag below will contain the day 2 forecast icon -->
-              <div class="icon" style="font-size: 2rem"></div>
+              <!-- The <img> tag below will contain the day 1 forecast icon -->
+              <img src="" id="forecast-icon2">
               <!-- The empty <span> tags below will contain the corresponding day 2 forecast info -->
-              <p>Temp: <span class="forecast-info"></span></p>
-              <p>Wind: <span class="forecast-info"></span></p>
-              <p>Humidity: <span class="forecast-info"></span></p>
+              <p>Temp: <span></span></p>
+              <p>Wind: <span></span></p>
+              <p>Humidity: <span></span></p>
             </div>
           </div>
 
           <div class="col">
-            <div class="card" style="color: white; background-color: #33475a">
+            <div class="card p-2" style="color: white; background-color: #33475a">
               <!-- The <h3> tag below will contain the day 3 forecast date -->
               <h3 class="forecast-date"></h3>
-              <!-- The <div> tag below will contain the day 3 forecast icon -->
-              <div class="icon" style="font-size: 2rem"></div>
+              <!-- The <img> tag below will contain the day 1 forecast icon -->
+              <img src="" id="forecast-icon3">
               <!-- The empty <span> tags below will contain the corresponding day 3 forecast info -->
-              <p>Temp: <span class="forecast-info"></span></p>
-              <p>Wind: <span class="forecast-info"></span></p>
-              <p>Humidity: <span class="forecast-info"></span></p>
+              <p>Temp: <span></span></p>
+              <p>Wind: <span></span></p>
+              <p>Humidity: <span></span></p>
             </div>
           </div>
 
           <div class="col">
-            <div class="card" style="color: white; background-color: #33475a">
+            <div class="card p-2" style="color: white; background-color: #33475a">
               <!-- The <h3> tag below will contain the day 4 forecast date -->
               <h3 class="forecast-date"></h3>
-              <!-- The <div> tag below will contain the day 4 forecast icon -->
-              <div class="icon" style="font-size: 2rem"></div>
+              <!-- The <img> tag below will contain the day 1 forecast icon -->
+              <img src="" id="forecast-icon4">
               <!-- The empty <span> tags below will contain the corresponding day 4 forecast info -->
-              <p>Temp: <span class="forecast-info"></span></p>
-              <p>Wind: <span class="forecast-info"></span></p>
-              <p>Humidity: <span class="forecast-info"></span></p>
+              <p>Temp: <span></span></p>
+              <p>Wind: <span></span></p>
+              <p>Humidity: <span></span></p>
             </div>
           </div>
 
           <div class="col">
-            <div class="card" style="color: white; background-color: #33475a">
+            <div class="card p-2" style="color: white; background-color: #33475a">
               <!-- The <h3> tag below will contain the day 5 forecast date -->
               <h3 class="forecast-date"></h3>
-              <!-- The <div> tag below will contain the day 5 forecast icon -->
-              <div class="icon" style="font-size: 2rem"></div>
+              <!-- The <img> tag below will contain the day 1 forecast icon -->
+              <img src="" id="forecast-icon5">
               <!-- The empty <span> tags below will contain the corresponding day 5 forecast info -->
-              <p>Temp: <span class="forecast-info"></span></p>
-              <p>Wind: <span class="forecast-info"></span></p>
-              <p>Humidity: <span class="forecast-info"></span></p>
+              <p>Temp: <span></span></p>
+              <p>Wind: <span></span></p>
+              <p>Humidity: <span></span></p>
             </div>
           </div>
         </div>
