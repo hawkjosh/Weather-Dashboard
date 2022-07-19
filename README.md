@@ -2,7 +2,7 @@
 
 ## Description
 
-In this challenge, I used a server-side API to retrieve weather data for cities and created an app for users to input their query information and get back specific weather outlook data for multiple cities.
+In this challenge, I used a server-side API to retrieve weather data for cities and created an app for users to input their query information to get back specific weather outlook data for multiple cities.
 
 ## Screenshot
 

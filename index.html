@@ -10,7 +10,7 @@
   <title>Weather App</title>
 </head>
 
-<header class="header bg-primary bg-gradient">
+<header class="header bg-primary">
   <h1 class="text-center text-light">WEATHER DASHBOARD</h1>
 </header>
 
@@ -19,21 +19,21 @@
   <div class="row">
     <div class="col-3 vh-100">
       <div id="search-area">
-        <label style="font-size: 1.75rem; font-weight: bold" class="ms-2">Search for a City:</label>
+        <label style="font-size: 1.75rem; font-weight: bold" class="ms-4">Search for a City:</label>
         <br>
-        <input id="search-bar" class="col-12 m-2" type="text" placeholder="San Diego" />
+        <input id="search-bar" class="col-12 m-4" type="text" placeholder="San Diego" />
         <br>
-        <button id="search-btn" class="btn btn-primary col-12 m-2">Search</button>
+        <button id="search-btn" class="btn btn-primary col-12 mx-4">Search</button>
       </div>
 
-      <hr>
+      <hr class="m-4 w-100">
 
       <!-- Below will be where search history results are displayed -->
       <ul id="search-history" class="history"></ul>
     </div>
 
     <div class="col-9 vh-100">
-      <div id="search-results" class="border border-dark bg-secondary p-2 bg-opacity-50 ms-4">
+      <div id="search-results" class="border border-dark bg-secondary p-2 bg-opacity-50 m-4">
         <!-- Below is an empty <h2> element for the current city name and date -->
         <h2 id="city"></h2>
         <!-- Below is an empty <img> element for the current weather icon -->
@@ -44,10 +44,10 @@
         <p>UV Index: <span class="curr-info"></span></p>
       </div>
 
-      <h2 class="m-4">5-Day Forecast:</h2>
+      <h2 class="mx-4 my-2">5-Day Forecast:</h2>
 
       <div class="container overflow-hidden">
-        <div id="forecast-info" class="row gx-4">
+        <div id="forecast-info" class="row g-4">
           <div class="col">
             <div class="card p-2" style="color: white; background-color: #33475a">
               <!-- The <h3> tag below will contain the day 1 forecast date -->
