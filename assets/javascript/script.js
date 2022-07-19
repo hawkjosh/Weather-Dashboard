@@ -155,9 +155,9 @@ function renderHistory() {
     var prevSearches = history[i];
 
     var historyBtn = document.createElement('button');
-    historyBtn.innerText = prevSearches;
+    historyBtn.textContent = prevSearches;
     historyBtn.setAttribute('data-index', i);
-    historyBtn.classList.add('btn', 'btn-secondary', 'col-12', 'm-2');
+    historyBtn.classList.add('btn', 'btn-secondary', 'col-12', 'mx-4', 'mb-2');
 
     historyEl.appendChild(historyBtn);
   }
