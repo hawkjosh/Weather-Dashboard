@@ -6,8 +6,8 @@ In this challenge, I used a server-side API to retrieve weather data for cities 
 
 ## Screenshot
 
-<!-- ![Screenshot of the deployed web application](./assets/images/XXXXX.png) -->
+![Screenshot of the deployed web application](./assets/images/module6_webpage_screenshot.png)
 
 ## Link
 
-<!-- To view the deployed website, [CLICK HERE](https://hawkjosh.github.io/XXXXX/). -->
+To view the deployed website, [CLICK HERE](https://hawkjosh.github.io/module6-weather-dashboard-challenge/).

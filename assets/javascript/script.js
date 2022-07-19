@@ -35,7 +35,7 @@ function searchCity() {
   }
 
   // Fetch call using openweathermap API info
-  let queryURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + searchBar.value + '&appid=' + APIKey;
+  let queryURL = 'https://api.openweathermap.org/geo/1.0/direct?q=' + searchBar.value + '&appid=' + APIKey;
 
   fetch(queryURL).then(function(response) {
     return response.json();
