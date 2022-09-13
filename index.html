@@ -1,124 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Linked bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Weather App</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/jass.css" />
+    <title>Weather Dashboard</title>
+  </head>
 
-<header class="header bg-primary">
-  <h1 class="text-center text-light">WEATHER DASHBOARD</h1>
-</header>
+  <body>
+    <header class="container-fluid text-center text-white bg-dark p-2 weather-header">
+      <h1>Weather Dashboard</h1>
+    </header>
 
-<body>
-
-  <div class="row">
-    <div class="col-3 vh-100">
-      <div id="search-area">
-        <label style="font-size: 1.75rem; font-weight: bold" class="ms-4">Search for a City:</label>
-        <br>
-        <input id="search-bar" class="col-12 m-4" type="text" placeholder="San Diego" />
-        <br>
-        <button id="search-btn" class="btn btn-primary col-12 mx-4">Search</button>
-      </div>
-
-      <hr class="m-4 w-100">
-
-      <!-- Below will be where search history results are displayed -->
-      <ul id="search-history" class="history"></ul>
-    </div>
-
-    <div class="col-9 vh-100">
-      <div id="search-results" class="border border-dark bg-secondary p-2 bg-opacity-50 m-4">
-        <!-- Below is an empty <h2> element for the current city name and date -->
-        <h2 id="city"></h2>
-        <!-- Below is an empty <img> element for the current weather icon -->
-        <img src="" id="city-icon" />
-        <p>Temp: <span class="curr-info"></span></p>
-        <p>Wind: <span class="curr-info"></span></p>
-        <p>Humidity: <span class="curr-info"></span></p>
-        <p>UV Index: <span class="curr-info"></span></p>
-      </div>
-
-      <h2 class="mx-4 my-2">5-Day Forecast:</h2>
-
-      <div class="container overflow-hidden">
-        <div id="forecast-info" class="row g-4">
-          <div class="col">
-            <div class="card p-2" style="color: white; background-color: #33475a">
-              <!-- The <h3> tag below will contain the day 1 forecast date -->
-              <h3 class="forecast-date"></h3>
-              <!-- The <img> tag below will contain the day 1 forecast icon -->
-              <img src="" id="forecast-icon1" />
-              <!-- The empty <span> tags below will contain the corresponding day 1 forecast info -->
-              <p>Temp: <span></span></p>
-              <p>Wind: <span></span></p>
-              <p>Humidity: <span></span></p>
+    <!-- max-width for ultra wide resolutions -->
+    <div class="container-fluid" style="max-width: 1400px">
+      <div class="row">
+        <aside class="col-lg-3 pb-3">
+          <h2 id="form-heading" class="mt-1 h3 form-label">Search for a City:</h2>
+          <form id="search-form" class="form">
+            <div class="form-inline form-group">
+              <div class="input-group">
+                <input class="form-input weather-search" type="text" id="search-input" placeholder="San Diego" aria-labelledby="form-heading" aria-controls="today forecast" />
+                <div class="input-group-append">
+                  <button type="submit" class="btn search-button" id="search-button" aria-label="submit search">
+                    Search
+                  </button>
+                  <hr class="hr weather-hr" />
+                </div>
+              </div>
             </div>
-          </div>
+          </form>
+          <div class="list-group" id="history"></div>
+        </aside>
 
-          <div class="col">
-            <div class="card p-2" style="color: white; background-color: #33475a">
-              <!-- The <h3> tag below will contain the day 2 forecast date -->
-              <h3 class="forecast-date"></h3>
-              <!-- The <img> tag below will contain the day 1 forecast icon -->
-              <img src="" id="forecast-icon2" />
-              <!-- The empty <span> tags below will contain the corresponding day 2 forecast info -->
-              <p>Temp: <span></span></p>
-              <p>Wind: <span></span></p>
-              <p>Humidity: <span></span></p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card p-2" style="color: white; background-color: #33475a">
-              <!-- The <h3> tag below will contain the day 3 forecast date -->
-              <h3 class="forecast-date"></h3>
-              <!-- The <img> tag below will contain the day 1 forecast icon -->
-              <img src="" id="forecast-icon3" />
-              <!-- The empty <span> tags below will contain the corresponding day 3 forecast info -->
-              <p>Temp: <span></span></p>
-              <p>Wind: <span></span></p>
-              <p>Humidity: <span></span></p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card p-2" style="color: white; background-color: #33475a">
-              <!-- The <h3> tag below will contain the day 4 forecast date -->
-              <h3 class="forecast-date"></h3>
-              <!-- The <img> tag below will contain the day 1 forecast icon -->
-              <img src="" id="forecast-icon4" />
-              <!-- The empty <span> tags below will contain the corresponding day 4 forecast info -->
-              <p>Temp: <span></span></p>
-              <p>Wind: <span></span></p>
-              <p>Humidity: <span></span></p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card p-2" style="color: white; background-color: #33475a">
-              <!-- The <h3> tag below will contain the day 5 forecast date -->
-              <h3 class="forecast-date"></h3>
-              <!-- The <img> tag below will contain the day 1 forecast icon -->
-              <img src="" id="forecast-icon5" />
-              <!-- The empty <span> tags below will contain the corresponding day 5 forecast info -->
-              <p>Temp: <span></span></p>
-              <p>Wind: <span></span></p>
-              <p>Humidity: <span></span></p>
-            </div>
-          </div>
+        <div class="col-lg-9 pb-3">
+          <section id="today" class="mt-3" role="region" aria-live="polite"></section>
+          <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Linked moment.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
-  <script src="./assets/javascript/script.js"></script>
-</body>
+    <!-- use day.js to easily format dates -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js" 
+      integrity="sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w==" 
+      crossorigin="anonymous"
+    ></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js" 
+      integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg==" 
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/javascript/script.js"></script>
+  </body>
 </html>
