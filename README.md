@@ -10,4 +10,4 @@ In this challenge, I used a server-side API to retrieve weather data for cities 
 
 ## Link
 
-To view the deployed website, [CLICK HERE](https://hawkjosh.github.io/module6-weather-dashboard-challenge/).
+To view the deployed website, [CLICK HERE](https://hawkjosh.github.io/Weather-Dashboard/).
